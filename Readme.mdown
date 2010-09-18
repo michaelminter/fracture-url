@@ -1,0 +1,17 @@
+## About
+
+I've always hated writing all of the basic code to get apps started, so I
+decided that I'd make my own little template that I could use to quickly get
+started on a web app that uses Sinatra and DataMapper.
+
+This template provides some basic setup for the database, a simple user login
+system, basic HTML/CSS templates, and some other little things that I use often.
+
+## Usage
+
+The template is pretty much ready to go, but make sure you have the Sinatra,
+DataMapper, BCrypt, and Rack Flash gems installed.
+
+## License
+
+Everything here is in the public domain, so do whatever you want with them!
