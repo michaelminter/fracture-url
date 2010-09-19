@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'sinatra'
+gem 'heroku'
 gem 'dm-core'
 gem 'dm-postgres-adapter'
 gem 'dm-migrations'
