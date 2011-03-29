@@ -7,7 +7,6 @@ gem 'dm-migrations'
 gem 'dm-validations'
 gem 'dm-timestamps'
 gem 'dm-types'
-gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'rack-flash'
 
 group :development do
@@ -15,7 +14,8 @@ group :development do
   gem 'dm-sqlite-adapter'
 end
 
-group :testing do
+group :test do
+  gem 'rack-test'
   gem 'rspec'
 end
 

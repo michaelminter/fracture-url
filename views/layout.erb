@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><%= "#{@title} &mdash; " if @title %>Sinatra App</title>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="icon.png" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <title><%= "#{@title} &mdash; " if @title %>Title</title>
+  <link rel="shortcut icon" href="icon.png">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/script.js"></script>
 </head>
 <body>
-    <% if flash[:notice] %>
-    <p><strong><%= flash[:notice] %></strong></p>
-    <% end %>
-    <%= yield %>
+  <% if flash[:notice] %>
+  <div class="flash"><%= flash[:notice] %></div>
+  <% end %>
+<%= yield %>
 </body>
 </html>
