@@ -1,13 +1,14 @@
 ## About
 
-I hate writing boilerplate code, and since I couldn't find any good templates
-for getting a basic Sinatra app running, I decided to make my own.
+Sinatra-DataMapper-Template is a little template to help you quickly start work
+on your Sinatra/DataMapper projects without worrying about writing too much
+boilerplate code. Here's a list of its features:
 
-The Sinatra/DataMapper template includes basic code to set up a database, a
-simple user login system, a little bit of HTML/CSS, and other things that I
-usually include in my Sinatra apps.
+ - Basic `app.rb` file with DataMapper setup and a couple routes
+ - RSpec testing
+ - Ready for deploying to Heroku
+ - Includes my HTML5 template, which includes jQuery and Eric Meyer's CSS reset
 
 ## License
 
-Everything here is in the public domain, so do whatever you want with it! Also,
-feel free to fork this on GitHub to help improve it.
+Everything is in the public domain unless otherwise specified.
