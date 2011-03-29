@@ -1,11 +1,5 @@
 require 'sinatra'
-require 'pg'
-require 'dm-core'
-require 'dm-postgres-adapter'
-require 'dm-migrations'
-require 'dm-validations'
-require 'dm-timestamps'
-require 'dm-types'
+require 'datamapper'
 require 'rack-flash'
 
 enable :sessions

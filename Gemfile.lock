@@ -7,7 +7,21 @@ GEM
     configuration (1.2.0)
     data_objects (0.10.3)
       addressable (~> 2.1)
+    datamapper (1.1.0)
+      dm-aggregates (= 1.1.0)
+      dm-constraints (= 1.1.0)
+      dm-core (= 1.1.0)
+      dm-migrations (= 1.1.0)
+      dm-serializer (= 1.1.0)
+      dm-timestamps (= 1.1.0)
+      dm-transactions (= 1.1.0)
+      dm-types (= 1.1.0)
+      dm-validations (= 1.1.0)
     diff-lcs (1.1.2)
+    dm-aggregates (1.1.0)
+      dm-core (~> 1.1.0)
+    dm-constraints (1.1.0)
+      dm-core (~> 1.1.0)
     dm-core (1.1.0)
       addressable (~> 2.2.4)
     dm-do-adapter (1.1.0)
@@ -18,10 +32,16 @@ GEM
     dm-postgres-adapter (1.1.0)
       dm-do-adapter (~> 1.1.0)
       do_postgres (~> 0.10.2)
+    dm-serializer (1.1.0)
+      dm-core (~> 1.1.0)
+      fastercsv (~> 1.5.4)
+      json (~> 1.4.6)
     dm-sqlite-adapter (1.1.0)
       dm-do-adapter (~> 1.1.0)
       do_sqlite3 (~> 0.10.2)
     dm-timestamps (1.1.0)
+      dm-core (~> 1.1.0)
+    dm-transactions (1.1.0)
       dm-core (~> 1.1.0)
     dm-types (1.1.0)
       bcrypt-ruby (~> 2.1.4)
@@ -46,7 +66,6 @@ GEM
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
     mime-types (1.16)
-    pg (0.10.1)
     rack (1.2.2)
     rack-flash (0.1.1)
       rack
@@ -77,15 +96,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dm-core
-  dm-migrations
+  datamapper
   dm-postgres-adapter
   dm-sqlite-adapter
-  dm-timestamps
-  dm-types
-  dm-validations
   heroku
-  pg
   rack-flash
   rack-test
   rspec
