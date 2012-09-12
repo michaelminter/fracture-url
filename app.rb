@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'datamapper'
+require 'dm-migrations'
 require 'pusher'
 require 'active_support'
 require 'time-ago-in-words'
@@ -36,7 +37,7 @@ class Fracture
 end
 
 DataMapper.finalize
-# DataMapper.auto_upgrade!
+DataMapper.auto_upgrade!
 
 get '/' do
   @fractures = Fracture.all(:limit => 5, :order => [ :created_at.desc ])
