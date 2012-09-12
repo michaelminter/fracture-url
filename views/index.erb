@@ -8,7 +8,7 @@
           <h1 id="title" style="color:#FFFFFF;font:52px 'courgette';text-shadow:2px 2px #01508b;">Fracture.it</h1>
         </div><!--/seven columns alpha-->
       
-        <h2 class="tagline"><span class="fancy">"</span>Shorten your URLs like a boss. Type one in the text field below and hit <em>Enter</em>.<span class="fancy">"</span></h2><!--YOUR TAGLINE OR STATEMENT HERE, DELETE h2.tagline:first-letter IN CSS IF NOT USING QUOTE MARKS-->
+        <h2 class="tagline"><span class="fancy">"</span>Shorten your URLs like a boss. Start typing in the text field below and hit <em>Enter</em>.<span class="fancy">"</span></h2><!--YOUR TAGLINE OR STATEMENT HERE, DELETE h2.tagline:first-letter IN CSS IF NOT USING QUOTE MARKS-->
         
         <div id="messages"><small>We won't send your details to 3rd parties</small></div><!--/#messages-->
         <form method="post" action="/" id="contact_form">
@@ -26,10 +26,10 @@
         
         <p class="half-bottom">Key benefits of use:</p><!--MAIN LIST, ADD IN YOUR FEATURES AND BENEFITS-->
         <ul>
-          <li><i class="icon-check"></i> mS based transactions</li>
+          <li><i class="icon-check"></i> Super fast (mS) transactions</li>
           <li><i class="icon-check"></i> Awesome <strong>JSON API</strong></li>
-          <li><i class="icon-check"></i> <strong>Postgres</strong> backed unlimited storage</li>
-          <li><i class="icon-check"></i> A sense of wellbeing</li>
+          <li><i class="icon-check"></i> <strong>Postgres</strong> backed storage engine</li>
+          <li><i class="icon-check"></i> Unilimited life per request</li>
         </ul>
         
       </div><!---/seven columns-->
@@ -39,17 +39,15 @@
 
 <div id="table_container">
   <div id="status"></div>
-  <table>
+  <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <th>ID</th>
-      <th>URL</th>
-      <th>Encoded URI</th>
-      <th>Created</th>
+      <th>Original URL</th>
+      <th>Fractured URL</th>
+      <th>Creation</th>
     </tr>
     <tbody id="pusher_container">
       <% @fractures.each do |f| %>
       <tr class="<%= cycle %>">
-        <td><%= f.id %></td>
         <td><a href="<%= f.url %>" target="_blank"><%= f.url %></a></td>
         <td><a href="http://fracture.it/<%= f.encoded_uri %>" target="_blank">http://fracture.it/<%= f.encoded_uri %></a></td>
         <td style="text-align:right;"><%= f.created_at.to_time.ago_in_words %></td>

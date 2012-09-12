@@ -222,6 +222,9 @@ li i {
 #table_container table tr th {
   font-weight:bold;
 }
+#table_container table tr td {
+  padding:2px 5px;
+}
 #table_container table tr.odd {
   background-color:#EEEEEE;
 }

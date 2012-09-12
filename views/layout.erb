@@ -37,7 +37,7 @@
         $('div#status').text('Connecting to Pusher...');
       });
       pusher.connection.bind('connected', function() {
-        $('div#status').html('<a href="http://pusherapp.com" target="_blank" style="border:none;"><img src="/images/pusher_badge_light_2.png" style="border:none;" /></a>');
+        $('div#status').html('<a href="http://pusher.com?utm_source=badge" target="_blank" style="border:none;"><img src="/images/pusher_badge_light_2.png" style="border:none;" /></a>');
       });
       pusher.connection.bind('failed', function() {
         $('div#status').text('Connection to Pusher failed :(');
@@ -51,9 +51,9 @@
         var uri = '<a href="http://fracture.it/'+data.encoded_uri+'" target="_blank">http://fracture.it/'+data.encoded_uri+'</a>';
         
         if ($('#pusher_container tr:first').attr('class') == 'even') {
-          $('#pusher_container').prepend($('<tr class="odd"><td>'+data.id+'</td><td>'+url+'</td><td>'+uri+'</td><td style="text-align:right;">'+data.created_at+'</td></tr>').fadeIn('slow'));
+          $('#pusher_container').prepend($('<tr class="odd"><td>'+url+'</td><td>'+uri+'</td><td style="text-align:right;">'+data.created_at+'</td></tr>').fadeIn('slow'));
         } else {
-          $('#pusher_container').prepend($('<tr class="even"><td>'+data.id+'</td><td>'+url+'</td><td>'+uri+'</td><td style="text-align:right;">'+data.created_at+'</td></tr>').fadeIn('slow'));
+          $('#pusher_container').prepend($('<tr class="even"><td>'+url+'</td><td>'+uri+'</td><td style="text-align:right;">'+data.created_at+'</td></tr>').fadeIn('slow'));
         }
       });
     });
