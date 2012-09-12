@@ -1,5 +1,83 @@
-  <h1>Hello, World!</h1>
-  <p>
-    Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor
-    lobortis. Pellentesque eu est a nulla placerat dignissim.
-  </p>
+<div id="mainWrapper"><!--WRAPS MAIN SECTION, CREATING LOVELY GRADIENT BACKGROUND-->
+  <div id="main" class="container clearfix">
+    <div class="sixteen columns">
+    
+      <div class="seven columns alpha">
+      
+        <div class="row remove-bottom">
+          <div class="five columns alpha">
+            <h1 class="half-bottom"><img src="images/logo.png" alt="Logo" class="scale-with-grid" /></h1><!--LOTS OF TAGS, BUT JUST FOCUS ON THE H1, REPLACE IMAGE WITH YOUR OWN LOGO, H1 TAGS WRAP FOR SEO PURPOSES-->
+          </div><!--/five columns alpha-->
+        </div><!--/seven columns alpha-->
+      
+        <h2 class="tagline"><span class="fancy">"</span>I build engaging and exciting web solutions for great people, like you!<span class="fancy">"</span></h2><!--YOUR TAGLINE OR STATEMENT HERE, DELETE h2.tagline:first-letter IN CSS IF NOT USING QUOTE MARKS-->
+        
+        <div id="messages"><small>We won't send your details to 3rd parties</small></div><!--/#messages--><!--FORM PHP GENERATED MESSAGES-->
+        <form method="post" action="/" id="contact_form"><!--THIS IS THE PHP FORM, MODIFY THE PLACEHOLDER ATTRIBUTE ONLY-->
+            <input type="text" name="url" id="email" class="email" placeholder="http://" />
+            <button type="submit" id="submit"><i class="icon-ok icon large"></i></button>
+            <input type="hidden" name="send" value="1" />
+        </form><!--/form-->
+        
+      </div><!--/seven columns offset by two-->
+    
+    
+      <div id="second" class="seven columns offset-by-two omega">
+        
+        <p>Our <strong>brand new</strong> site is on it's way, not long to go now. <a href="#">Keep checking</a> with us for updates, we'll be offering <strong>news, advice & freebies</strong> for everyone that signs up to our newsletter.</p><!--MAIN COPY, ADD IN WHAT YOU WISH-->
+        
+        <p class="half-bottom">Sign up now and receive:</p><!--MAIN LIST, ADD IN YOUR FEATURES AND BENEFITS-->
+        <ul>
+          <li><i class="icon-check"></i> Up-to-date news</li>
+          <li><i class="icon-check"></i> Freebies & Competitions</li>
+          <li><i class="icon-check"></i> Great <strong>CSS & HTML</strong> ideas</li>
+          <li><i class="icon-check"></i> A sense of wellbeing</li>
+        </ul>
+        
+      </div><!---/seven columns-->
+    </div><!--/sixteen columns-->
+  </div><!--/container -->
+</div><!--/#mainWrapper-->
+
+<div id="table_container">
+  <div id="status"></div>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>URL</th>
+      <th>Encoded URI</th>
+      <th>Created</th>
+    </tr>
+    <tbody id="pusher_container">
+      <% @fractures.each do |f| %>
+      <tr class="<%= cycle %>">
+        <td><%= f.id %></td>
+        <td><a href="<%= f.url %>" target="_blank"><%= f.url %></a></td>
+        <td><a href="http://fracture.it/<%= f.encoded_uri %>" target="_blank">http://fracture.it/<%= f.encoded_uri %></a></td>
+        <td style="text-align:right;"><%= f.created_at.to_time.ago_in_words %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<div class="footerWrapper"><!--WRAPS FOOTER, CREATING THE WHITE BACKGROUND-->
+  <footer class="container clearfix">
+    <div class="nine columns alpha">
+        <div id="tweetWrapper"><!--THIS WRAPS THE TWEETS SECTION AND PRESERVES THE LOADING MESSAGE-->
+          <div id="tweet"><small>Please wait whilst our latest tweets load</small></div><!--THIS HANDLES THE TWITTER SECTION, YOU CAN CHANGE THE WAITING MESSAGE, BUT LEAVE THE TAGS INTACT-->
+        </div>
+    </div><!--/nine columns-->
+    
+    <div class="seven columns omega">
+        <div id="socialMedia" class="btn-group"><!--SOCIAL MEDIA LINKS, ADD YOUR APPROPRIATE URL'S TO THE A TAGS-->
+            <a class="btn twitter" href="http://twitter.com/mothore"><i class="icon-twitter"></i></a>
+            <a class="btn googleplus" href="http://google.com/plus/mothore"><i class="icon-google-plus"></i></a>
+            <a class="btn facebook" href="http://facebook.com/moorberry"><i class="icon-facebook"></i></a>
+            <a class="btn github" href="http://github.com/michaelminter"><i class="icon-github"></i></a>
+            <a class="btn linkedin" href="http://linkedin.com/profile/michaelbminter"><i class="icon-linkedin"></i></a>
+            <a class="btn pinterest" href="http://pinterest.com"><i class="icon-pinterest"></i></a>
+        </div>
+    </div><!--/seven columns-->
+    
+  </footer><!--/footer container-->
+</div><!--/footerWrapper-->

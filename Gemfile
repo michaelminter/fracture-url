@@ -4,6 +4,8 @@ gem 'sinatra'
 gem 'heroku'
 gem 'datamapper'
 gem 'rack-flash'
+gem 'pusher'
+gem "time-ago-in-words"
 
 group :development do
   gem 'sqlite3-ruby'

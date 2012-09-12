@@ -1,1 +1,221 @@
-@import url(reset.css);
+/* #Site Styles
+================================================== */
+
+#mainWrapper {
+  background: url(/images/backgroundSurf.jpg) no-repeat center center fixed;
+  background-color: white;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  padding: 60px 0 0 0;
+}
+
+#main {
+  padding: 0 0 60px 0;
+}
+
+#second {
+    padding-top: 90px;
+}
+
+#second a {
+  color: white;
+  border-color: white;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.6);
+}
+
+h2.tagline {
+  color: white;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.6);
+  margin: 0 0 0 20px;
+}
+
+h2.tagline:first-letter {
+  margin: 0 8px 0 -20px;
+}
+
+.fancy {
+  font-family: "Georgia", serif;
+  font-style: italic;
+}
+
+/*--FORM STYLES--*/
+
+form {
+  border: none;
+  margin: 10px 0 0 0;
+}
+
+::-webkit-input-placeholder {
+    color: #97d8d9;
+}
+:-moz-placeholder {
+    color: #97d8d9;
+}
+:-ms-input-placeholder {
+    color: #97d8d9;
+}
+
+button#submit {
+  position: relative;
+  top: -37px;
+  left: 5px;
+  outline: 0;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #60b4bc;
+  cursor: pointer;
+}
+
+button#submit:hover {
+  color: #2f999b;
+}
+
+#messages {
+  margin: 25px 0 0 0;
+}
+
+li i {
+  margin-right: 12px;
+}
+
+/*--SOCIAL MEDIA LINKS--*/
+
+#socialMedia {
+  font-size: 22px;
+  line-height: 36px;
+  text-align: right;
+}
+
+#socialMedia a {
+  text-decoration: none;
+  border: none;
+  text-shadow: none;
+  margin: 0 7px 0 0;
+  color: white;
+  background: #60b4bc;
+  width: 38px;
+  height: 34px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 14px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#socialMedia a:last-of-type {
+  margin: 0;
+}
+
+#socialMedia a:hover {
+  -webkit-transform: rotate(360deg) scale(1.3);
+  -moz-transform: rotate(360deg) scale(1.3);
+  -o-transform: rotate(360deg) scale(1.3);
+  -ms-transform: rotate(360deg) scale(1.3);
+  transform: rotate(360deg) scale(1.3);
+  color: white;
+}
+
+#socialMedia a.facebook:hover { background: #3B5998; }
+#socialMedia a.twitter:hover { background: #4099FF; }
+#socialMedia a.github:hover { background: #333; }
+#socialMedia a.pinterest:hover { background: #E00002; }
+#socialMedia a.linkedin:hover { background: #4875B4; }
+#socialMedia a.googleplus:hover { background: #D6492C; }
+
+/* #Page Styles
+================================================== */
+
+.footerWrapper {
+  background-color: #fff;
+  color: #87d9db;
+  padding: 30px 0 40px;
+}
+
+/* Twitter */
+
+#tweet img {
+  float: left;
+  padding: 5px 10px 50px 0;
+}
+
+#tweet ul li{
+  line-height: 22px;
+  font-size: 14px;
+}
+
+
+/* #Media Queries
+================================================== */
+
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 959px) {}
+
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+  /* All Mobile Sizes (devices and browser) */
+  @media only screen and (max-width: 767px) {
+  
+  input[type="text"] {
+    max-width: 340px;
+  }
+  
+  #second {
+      padding-top: 10px;
+  }
+  
+  #socialMedia {
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  #tweet {
+    text-align: center;
+  }
+  
+  #tweet img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  h2.tagline {
+    text-align: center;
+    margin: 0;
+  }
+  
+  }
+
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 479px) {
+  
+  input[type="text"] {
+    max-width: 230px;
+  }
+  
+  }
+
+#table_container {
+  color:#333333;
+  margin:40px auto;
+  width:960px;
+}
+#table_container table {
+  width:960px;
+}
+#table_container table tr th {
+  font-weight:bold;
+}
+#table_container table tr.odd {
+  background-color:#EEEEEE;
+}
