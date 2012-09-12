@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'datamapper'
+require 'data_mapper'
 require 'pusher'
 require 'active_support'
 require 'time-ago-in-words'
