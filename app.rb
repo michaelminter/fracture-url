@@ -40,7 +40,6 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 get '/' do
-  logger.info "-----ENV-----#{ENV.inspect}"
   @fractures = Fracture.all(:limit => 5, :order => [ :created_at.desc ])
   erb :index
 end
