@@ -33,6 +33,12 @@ class Fracture
   property :encoded_uri, String
   property :created_at, DateTime
   property :header_data, String
+  
+  before :save, :check_url
+  
+  def check_url
+    self.url = ('http://' + self.url) unless self.url =~ /^https?:\/\//
+  end
 end
 
 DataMapper.finalize
@@ -59,6 +65,7 @@ post '/' do
     :created_at => Time.now,
     :header_data => params.to_json
   )
+  
   if @fracture.save
     @fracture.encoded_uri = @fracture.id.to_s(36)
     if @fracture.save
