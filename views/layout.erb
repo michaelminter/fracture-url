@@ -50,7 +50,11 @@
         var url = '<a href="'+data.url+'" target="_blank">'+data.url+'</a>';
         var uri = '<a href="http://fracture.it/'+data.encoded_uri+'" target="_blank">http://fracture.it/'+data.encoded_uri+'</a>';
         
-        $('#pusher_container').prepend('<tr><td>'+data.id+'</td><td>'+url+'</td><td>'+uri+'</td><td style="text-align:right;">'+data.created_at+'</td></tr>');
+        if ($('#pusher_container tr:first').attr('class') == 'even') {
+          $('#pusher_container').prepend($('<tr class="odd"><td>'+data.id+'</td><td>'+url+'</td><td>'+uri+'</td><td style="text-align:right;">'+data.created_at+'</td></tr>').fadeIn('slow'));
+        } else {
+          $('#pusher_container').prepend($('<tr class="even"><td>'+data.id+'</td><td>'+url+'</td><td>'+uri+'</td><td style="text-align:right;">'+data.created_at+'</td></tr>').fadeIn('slow'));
+        }
       });
     });
   </script>
