@@ -1,8 +1,10 @@
 require 'sinatra'
-require 'data_mapper'
+require 'datamapper'
 require 'pusher'
 require 'active_support'
 require 'time-ago-in-words'
+
+logger.info "----#{ENV.inspect}"
 
 configure :development do
   Pusher.app_id = '27541'
