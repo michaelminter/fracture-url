@@ -6,6 +6,7 @@ gem 'datamapper'
 gem 'rack-flash'
 gem 'pusher'
 gem "time-ago-in-words"
+gem 'ps'
 
 group :development do
   gem 'sqlite3-ruby'
