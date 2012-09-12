@@ -21,7 +21,7 @@ helpers do
   end
 end
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/schorten_development")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/fracture")
 
 class Fracture
   include DataMapper::Resource
@@ -34,7 +34,7 @@ class Fracture
 end
 
 DataMapper.finalize
-DataMapper.auto_upgrade!
+# DataMapper.auto_upgrade!
 
 get '/' do
   @fractures = Fracture.all(:limit => 5, :order => [ :created_at.desc ])
