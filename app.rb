@@ -4,8 +4,6 @@ require 'pusher'
 require 'active_support'
 require 'time-ago-in-words'
 
-logger.info "----#{ENV.inspect}"
-
 configure :development do
   Pusher.app_id = '27541'
   Pusher.key    = '28933f2d3f6fe14e0427'
@@ -41,6 +39,7 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 get '/' do
+  logger.info "-----ENV-----#{ENV.inspect}"
   @fractures = Fracture.all(:limit => 5, :order => [ :created_at.desc ])
   erb :index
 end
