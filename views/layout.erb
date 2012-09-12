@@ -37,7 +37,7 @@
         $('div#status').text('Connecting to Pusher...');
       });
       pusher.connection.bind('connected', function() {
-        $('div#status').html('<img src="/images/pusher_badge_light_2.png" />');
+        $('div#status').html('<a href="http://pusherapp.com" target="_blank" style="border:none;"><img src="/images/pusher_badge_light_2.png" style="border:none;" /></a>');
       });
       pusher.connection.bind('failed', function() {
         $('div#status').text('Connection to Pusher failed :(');

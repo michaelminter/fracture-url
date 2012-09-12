@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'datamapper'
-require 'dm-migrations'
 require 'pusher'
 require 'active_support'
 require 'time-ago-in-words'
