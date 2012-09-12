@@ -23,8 +23,7 @@ helpers do
   end
 end
 
-# DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/fracture")
-DataMapper.setup(:default, 'postgres://mgtdfbhwqwwluc:1Dw8jg-g0eZ3E_MLERlhpIlzf5@ec2-107-22-166-64.compute-1.amazonaws.com:5432/d7lnkaqmeb0c')
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/fracture")
 
 class Fracture
   include DataMapper::Resource
