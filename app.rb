@@ -10,6 +10,10 @@ configure :development do
   Pusher.secret = 'e59c16a50add5ed547b3'
 end
 
+configure :production do
+  require 'newrelic_rpm'
+end
+
 enable :sessions
 
 helpers do
@@ -67,7 +71,7 @@ post '/' do
   )
   
   if @fracture.save
-    @fracture.encoded_uri = @fracture.id.to_s(36)
+    @fracture.encoded_uri = @fracture.id.to_s(36) # put in after_save callback
     if @fracture.save
       Pusher['test_channel'].trigger('my_event', { :id => @fracture.id, :url => @fracture.url, :encoded_uri => @fracture.encoded_uri, :created_at => @fracture.created_at.to_time.ago_in_words })
       "url: http://fracture.it/#{@fracture.encoded_uri}"

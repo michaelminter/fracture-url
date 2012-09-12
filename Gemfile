@@ -7,6 +7,7 @@ gem 'rack-flash'
 gem 'pusher'
 gem "time-ago-in-words"
 gem 'ps'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'sqlite3-ruby'
