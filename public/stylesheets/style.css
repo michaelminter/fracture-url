@@ -1,5 +1,11 @@
 /* #Site Styles
 ================================================== */
+@font-face {
+  font-family: "courgette";
+  src: url('/fonts/Courgette-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 #mainWrapper {
   background: url(/images/backgroundSurf.jpg) no-repeat center center fixed;
