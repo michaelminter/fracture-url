@@ -4,9 +4,11 @@ require 'pusher'
 require 'active_support'
 require 'time-ago-in-words'
 
-Pusher.app_id = '27541'
-Pusher.key    = '28933f2d3f6fe14e0427'
-Pusher.secret = 'e59c16a50add5ed547b3'
+configure :development do
+  Pusher.app_id = '27541'
+  Pusher.key    = '28933f2d3f6fe14e0427'
+  Pusher.secret = 'e59c16a50add5ed547b3'
+end
 
 enable :sessions
 
