@@ -74,7 +74,7 @@ get '/:encoded_uri' do
 end
 
 post '/' do
-  # content_type :json
+  content_type :json
   
   @fracture = Fracture.new(
     :url => params[:url],
@@ -84,8 +84,8 @@ post '/' do
   )
     
   if @fracture.save
-    "http://fracture.it/#{@fracture.encoded_uri}"
+    { :fractured_url => "http://fracture.it/#{@fracture.encoded_uri}" }.to_json
   else
-    "http://fracture.it/#{@fracture.encoded_uri}"
+    { :fractured_url => "http://fracture.it/#{@fracture.encoded_uri}" }.to_json
   end
 end
