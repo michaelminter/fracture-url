@@ -3,6 +3,7 @@ require 'datamapper'
 require 'pusher'
 require 'active_support'
 require 'time-ago-in-words'
+require 'json'
 
 configure :development do
   Pusher.app_id = '27541'
@@ -39,9 +40,19 @@ class Fracture
   property :header_data, String
   
   before :save, :check_url
+  after  :save, :encode_uri
+  after  :save, :pusher_app
   
   def check_url
     self.url = ('http://' + self.url) unless self.url =~ /^https?:\/\//
+  end
+  
+  def encode_uri
+    self.update(:encoded_uri => self.id.to_s(36))
+  end
+  
+  def pusher_app
+    Pusher['test_channel'].trigger('my_event', { :id => self.id, :url => self.url, :encoded_uri => self.encoded_uri, :created_at => self.created_at.to_time.ago_in_words })
   end
 end
 
@@ -63,18 +74,18 @@ get '/:encoded_uri' do
 end
 
 post '/' do
+  # content_type :json
+  
   @fracture = Fracture.new(
     :url => params[:url],
     :encoded_uri => '',
     :created_at => Time.now,
     :header_data => params.to_json
   )
-  
+    
   if @fracture.save
-    @fracture.encoded_uri = @fracture.id.to_s(36) # put in after_save callback
-    if @fracture.save
-      Pusher['test_channel'].trigger('my_event', { :id => @fracture.id, :url => @fracture.url, :encoded_uri => @fracture.encoded_uri, :created_at => @fracture.created_at.to_time.ago_in_words })
-      "url: http://fracture.it/#{@fracture.encoded_uri}"
-    end
+    "http://fracture.it/#{@fracture.encoded_uri}"
+  else
+    "http://fracture.it/#{@fracture.encoded_uri}"
   end
 end
