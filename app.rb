@@ -55,6 +55,9 @@ DataMapper.auto_upgrade!
 
 get '/' do
   @fractures = Fracture.all(:limit => 5, :order => [ :created_at.desc ])
+  
+  @pusher_api_key = Pusher.key
+  
   erb :index
 end
 
