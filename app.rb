@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'datamapper'
-require './config/pusher_credentials'
+require './config/pusher_credentials' if File.exists?('./config/pusher_credentials.rb')
 require 'active_support'
 require 'time-ago-in-words'
 require 'json'
