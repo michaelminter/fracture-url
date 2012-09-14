@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'datamapper'
-require './models/Fracture'
+require './models/fracture'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/fracture")
 
