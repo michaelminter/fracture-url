@@ -35,16 +35,16 @@ class Fracture
   property :header_data, String
   
   before :save, :check_url
-  after  :save, :encode_uri
-  after  :save, :pusher_app
+  # after  :save, :encode_uri
+  after  :update, :pusher_app
   
   def check_url
     self.url = ('http://' + self.url) unless self.url =~ /^https?:\/\//
   end
   
-  def encode_uri
-    self.update(:encoded_uri => self.id.to_s(36))
-  end
+  # def encode_uri
+    # self.update(:encoded_uri => self.id.to_s(36))
+  # end
   
   def pusher_app
     Pusher['test_channel'].trigger('my_event', { :id => self.id, :url => self.url, :encoded_uri => self.encoded_uri, :created_at => self.created_at.to_time.ago_in_words })
@@ -82,8 +82,8 @@ post '/' do
   )
     
   if @fracture.save
-    { :fractured_url => "http://fracture.it/#{@fracture.encoded_uri}" }.to_json
-  else
-    { :fractured_url => "http://fracture.it/#{@fracture.encoded_uri}" }.to_json
+    if @fracture.update(:encoded_uri => @fracture.id.to_s(36))
+      { :fractured_url => "http://fracture.it/#{@fracture.encoded_uri}" }.to_json
+    end
   end
 end

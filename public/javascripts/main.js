@@ -11,10 +11,11 @@ $(document).ready(function() {
           type: 'POST',
           url: post_url,
           data: post_data,
+          dataType: 'json',
           success: function(msg) {
             $('#messages small').fadeOut(500);
             setTimeout(function() {
-            $('#messages small').html(msg).fadeIn(500);
+              $('#messages small').html(msg.fractured_url).fadeIn(500);
             }, 500);
           }
         });
