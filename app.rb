@@ -11,7 +11,9 @@ configure :production do
   require 'newrelic_rpm'
 end
 
-enable :sessions
+# sessions: Support for encrypted, cookie-based sessions
+# logging:  Writes a single line to STDERR in Apache common log format
+# enable :sessions
 
 helpers do
   def cycle
