@@ -1,3 +1,4 @@
 .DS_Store
 my.db
 .bundle
+config/pusher_credentials.rb

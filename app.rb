@@ -1,15 +1,9 @@
 require 'sinatra'
 require 'datamapper'
-require 'pusher'
+require './config/pusher_credentials'
 require 'active_support'
 require 'time-ago-in-words'
 require 'json'
-
-configure :development do
-  Pusher.app_id = '27541'
-  Pusher.key    = '28933f2d3f6fe14e0427'
-  Pusher.secret = 'e59c16a50add5ed547b3'
-end
 
 configure :production do
   require 'newrelic_rpm'
