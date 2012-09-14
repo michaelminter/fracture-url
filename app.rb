@@ -5,6 +5,7 @@ require './config/pusher_credentials' if File.exists?('./config/pusher_credentia
 require 'active_support'
 require 'time-ago-in-words'
 require 'json'
+require './config/database'
 
 configure :production do
   require 'newrelic_rpm'
@@ -22,37 +23,6 @@ helpers do
     CYCLE[@_cycle = ((@_cycle || -1) + 1) % 2]
   end
 end
-
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/fracture")
-
-class Fracture
-  include DataMapper::Resource
-  
-  property :id, Serial
-  property :url, String
-  property :encoded_uri, String
-  property :created_at, DateTime
-  property :header_data, String
-  
-  before :save, :check_url
-  # after  :save, :encode_uri
-  after  :update, :pusher_app
-  
-  def check_url
-    self.url = ('http://' + self.url) unless self.url =~ /^https?:\/\//
-  end
-  
-  # def encode_uri
-    # self.update(:encoded_uri => self.id.to_s(36))
-  # end
-  
-  def pusher_app
-    Pusher['test_channel'].trigger('my_event', { :id => self.id, :url => self.url, :encoded_uri => self.encoded_uri, :created_at => self.created_at.to_time.ago_in_words })
-  end
-end
-
-DataMapper.finalize
-DataMapper.auto_upgrade!
 
 get '/' do
   @fractures = Fracture.all(:limit => 5, :order => [ :created_at.desc ])
