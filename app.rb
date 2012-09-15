@@ -41,18 +41,18 @@ end
 get '/:encoded_uri' do
   @fracture = Fracture.first(:encoded_uri => params[:encoded_uri])
 
-  user_agent = UserAgent.parse(request.env['HTTP_USER_AGENT'])
-  
-  @activity  = Activity.create(
-    :fracture_id => @fracture.id,
-    :host_ip => request.env['REMOTE_ADDR'],
-    :browser => user_agent.browser,
-    :version => user_agent.version.to_s.gsub(/[^0-9|.]/,'').split('.')[0].to_i,
-    :platform => user_agent.platform,
-    :is_mobile => user_agent.mobile?
-  )
-  
   unless @fracture.nil?
+    user_agent = UserAgent.parse(request.env['HTTP_USER_AGENT'])
+    
+    @activity  = Activity.create(
+      :fracture_id => @fracture.id,
+      :host_ip => request.env['REMOTE_ADDR'],
+      :browser => user_agent.browser,
+      :version => user_agent.version.to_s.gsub(/[^0-9|.]/,'').split('.')[0].to_i,
+      :platform => user_agent.platform,
+      :is_mobile => user_agent.mobile?
+    )
+    
     redirect @fracture.url
   else
     erb :not_found, :layout => false

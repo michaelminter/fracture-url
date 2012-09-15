@@ -1,4 +1,7 @@
 #Documentation::API
+This page refers to the Fracture.it API. Below I will describe how to interact with the application through the POST method.
+ 
+[Back](/)
 
 ##Console
 
@@ -22,3 +25,5 @@ or, if your URL is more than 200 characters, or simply isn't a URL at all
     }).done(function(data) {
       $('#message').html("Fractured URL: " + data.fractured_url);
     });
+
+[Back](/)
