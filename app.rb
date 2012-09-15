@@ -39,7 +39,7 @@ get '/:encoded_uri' do
   @fracture = Fracture.first(:encoded_uri => params[:encoded_uri])
 
   user_agent = UserAgent.parse(request.env['HTTP_USER_AGENT'])
-  puts "-----#{user_agent.to_s.inspect}"
+  
   @activity  = Activity.create(
     :fracture_id => @fracture.id,
     :host_ip => request.env['REMOTE_ADDR'],
