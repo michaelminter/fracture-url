@@ -83,3 +83,7 @@ end
 get '/documentation/api' do
   markdown :api, :layout => :markdown
 end
+
+get '/documentation/encoding' do
+  markdown :encoding, :layout => :markdown
+end

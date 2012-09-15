@@ -1,0 +1,87 @@
+/*
+    ___          ___           ___           ___           ___     
+   /  /\        /  /\         /__/\         /  /\         /  /\    
+  /  /:/       /  /::\        \  \:\       /  /:/_       /  /::\   
+ /__/::\      /  /:/\:\        \  \:\     /  /:/ /\     /  /:/\:\  
+ \__\/\:\    /  /:/~/::\   _____\__\:\   /  /:/_/::\   /  /:/  \:\ 
+    \  \:\  /__/:/ /:/\:\ /__/::::::::\ /__/:/__\/\:\ /__/:/ \__\:\
+     \__\:\ \  \:\/:/__\/ \  \:\~~\~~\/ \  \:\ /~~/:/ \  \:\ /  /:/
+     /  /:/  \  \::/       \  \:\  ~~~   \  \:\  /:/   \  \:\  /:/ 
+    /__/:/    \  \:\        \  \:\        \  \:\/:/     \  \:\/:/  
+    \__\/      \  \:\        \  \:\        \  \::/       \  \::/   
+                \__\/         \__\/         \__\/         \__\/ 
+				
+*/
+body {
+	background: #0f2638;
+	width: auto;
+	height: 100%;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+a:visited {
+	color: white;
+	text-decoration: none;
+}
+a:hover {
+	color: #c5c5c5;
+}
+#container  {
+	min-width:900px;
+	height:100%;
+	width:100%;
+}
+#step {
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+}
+.step {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#bg {
+	background: transparent url(/images/error/bg-404.jpg) fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#error {
+	font-family: 'Arial';
+	font-size: 40px;
+	color: white;
+	line-height: 40px;
+	position: absolute;
+	top: 350px;
+	left: 155px;
+}
+#title {
+font-family: 'Aldrich', sans-serif;
+	font-size: 220px;
+	color: white;
+	padding-right: 10px; 
+	position: absolute;
+	top: 110px;
+	left: 205px;
+	letter-spacing: -10px
+}
+#copyright {
+	font-family: 'Arial';
+	font-size: 14px;
+	color: #C9C9C9;
+	padding-right: 15px;
+	position: absolute;
+	top: 25px;
+	left: 45px;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
