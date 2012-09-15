@@ -100,6 +100,7 @@ GEM
     stringex (1.2.1)
     tilt (1.2.2)
     time-ago-in-words (0.1.2)
+    useragent (0.4.10)
     uuidtools (2.1.2)
 
 PLATFORMS
@@ -119,3 +120,4 @@ DEPENDENCIES
   sinatra
   sqlite3-ruby
   time-ago-in-words
+  useragent

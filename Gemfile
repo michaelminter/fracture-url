@@ -8,6 +8,7 @@ gem 'pusher'
 gem "time-ago-in-words"
 gem 'ps'
 gem 'newrelic_rpm'
+gem 'useragent'
 
 group :development do
   gem 'sqlite3-ruby'
