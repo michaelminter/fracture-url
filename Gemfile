@@ -9,6 +9,7 @@ gem "time-ago-in-words"
 gem 'ps'
 gem 'newrelic_rpm'
 gem 'useragent'
+gem 'rdiscount'
 
 group :development do
   gem 'sqlite3-ruby'

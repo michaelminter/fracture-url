@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'datamapper'
 require 'pusher'
+require 'rdiscount'
 require './config/pusher_credentials' if File.exists?('./config/pusher_credentials.rb')
 require 'active_support'
 require 'time-ago-in-words'
@@ -11,6 +12,8 @@ require 'useragent'
 configure :production do
   require 'newrelic_rpm'
 end
+
+set :markdown, :layout_engine => :erb
 
 # sessions: Support for encrypted, cookie-based sessions
 # logging:  Writes a single line to STDERR in Apache common log format
@@ -69,5 +72,14 @@ post '/' do
     if @fracture.update(:encoded_uri => @fracture.id.to_s(36))
       { :fractured_url => "http://fracture.it/#{@fracture.encoded_uri}" }.to_json
     end
+  else
+    @fracture.errors.each do |e|
+      Pusher['test_channel'].trigger('errors', { :message => e })
+    end
+    { :fractured_url => '', :error => @fracture.errors.full_messages }.to_json
   end
+end
+
+get '/documentation/api' do
+  markdown :api, :layout => :markdown
 end

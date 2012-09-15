@@ -57,6 +57,10 @@
           $('#pusher_container').prepend($('<tr class="even"><td>'+url+'</td><td>'+uri+'</td><td style="text-align:right;">'+data.created_at+'</td></tr>').fadeIn('slow'));
         }
       });
+      
+      channel.bind('errors', function(data) {
+        $('#messages').html('<small class="error_message">'+data.message+'</small>');
+      });
     });
   </script>
 </head>

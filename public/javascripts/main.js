@@ -23,12 +23,12 @@ $(document).ready(function() {
   });
 
   //TWITTER SET UP
-  getTwitters('tweet', { 
-      id: 'mothore',//ADD IN YOUR OWN TWITTER ID HERE
-      count: 1, 
-      enableLinks: true, 
-      ignoreReplies: true, 
-      clearContents: true,
-      template: '<img src="/images/twitterBird.png" alt="Twitter Bird" class="twitterBird" />"%text%" <a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/">%time%</a>'
-  });
+  // getTwitters('tweet', { 
+      // id: 'mothore',//ADD IN YOUR OWN TWITTER ID HERE
+      // count: 1, 
+      // enableLinks: true, 
+      // ignoreReplies: true, 
+      // clearContents: true,
+      // template: '<img src="/images/twitterBird.png" alt="Twitter Bird" class="twitterBird" />"%text%" <a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/">%time%</a>'
+  // });
 });
