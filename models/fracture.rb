@@ -2,10 +2,9 @@ class Fracture
   include DataMapper::Resource
   
   property :id, Serial
-  property :url, String
+  property :url, String, :length => 200
   property :encoded_uri, String
   property :created_at, DateTime
-  property :header_data, String
   
   before :save, :check_url
   # after  :save, :encode_uri

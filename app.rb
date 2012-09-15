@@ -62,8 +62,7 @@ post '/' do
   @fracture = Fracture.new(
     :url => params[:url],
     :encoded_uri => '',
-    :created_at => Time.now,
-    :header_data => params.to_json
+    :created_at => Time.now
   )
     
   if @fracture.save
