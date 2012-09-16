@@ -9,4 +9,6 @@ class Activity
   property :platform, String
   property :is_mobile, Boolean
   property :created_at, DateTime
+  
+  belongs_to :fracture
 end

@@ -6,6 +6,8 @@ class Fracture
   property :encoded_uri, String
   property :created_at, DateTime
   
+  has n, :activities
+  
   validates_format_of :url, :with => /\./, :message => 'Not a valid URL format'
   
   before :save, :check_url

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+  <title>Documentation::Analysis</title>
+  <link rel="stylesheet" type="text/css"  href="/stylesheets/analysis.css" />
+  <link type="text/css" href="/stylesheets/flick/jquery-ui-1.8.23.custom.css" rel="stylesheet" />
+  <script type="text/javascript" src="/javascripts/jquery-1.8.0.min.js"></script>
+  <script type="text/javascript" src="/javascripts/jquery-ui-1.8.23.custom.min.js"></script>
+  <script>
+  $(function() {
+    $("#tabs").tabs();
+  });
+  </script>
+</head>
+<body>
+
+<div class="wrapper">
+  <h1 class="logo">Documentation::Analysis</h1>
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">DASHBOARD</a></li>
+      <li><a href="#tabs-2">BROWSERS</a></li>
+      <li><a href="#tabs-3">PLATFORMS</a></li>
+      <li><a href="#tabs-4">POPULAR</a></li>
+    </ul>
+  
+    <%= erb :"partials/activity_main", :layout => false %>
+  
+    <%= erb :"partials/browsers", :layout => false %>
+  
+    <%= erb :"partials/platforms", :layout => false %>
+  
+    <%= erb :"partials/popular", :layout => false %>
+  </div>
+  
+  <div style="clear"></div>
+  <p class="footer"><a href="/">BACK</a></p>
+</div>
+
+</body>
+</html>

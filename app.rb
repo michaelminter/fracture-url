@@ -80,6 +80,11 @@ post '/' do
   end
 end
 
+get '/documentation/analysis' do
+  @activities = Activity.all
+  erb :analysis, :layout => false
+end
+
 get '/documentation/api' do
   markdown :api, :layout => :markdown
 end
