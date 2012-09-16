@@ -2,17 +2,19 @@
   <div class="in">      
     <table width="850" border="0" cellspacing="0" cellpadding="10" class="table_main" >
       <tr style="background-color:#d9d8d8;font-size:14px;">
-        <th width="192">URL</th>
-        <th width="192">Browser</th>
-        <th width="192">Platform</th>
-        <th width="192">Creation</th>
+        <th width="153">Orignal URL</th>
+        <th width="153">Fracture URL</th>
+        <th width="153">Browser</th>
+        <th width="153">Platform</th>
+        <th width="153">Requested</th>
       </tr>
       <% @activities.each do |a| %>
       <tr class="<%= cycle %>">
+        <td><a href="<%= a.fracture.url %>" target="_blank"><%= a.fracture.url %></a></td>
         <td><a href="http://fracture.it/<%= a.fracture.encoded_uri %>">http://fracture.it/<%= a.fracture.encoded_uri %></a></td>
-        <td><%= a.browser %> <%= a.version %></td>
+        <td><%= a.browser %> <%= 'v.' unless a.version.nil? %><%= a.version %></td>
         <td><%= a.platform %></td>
-        <td style="text-align:right;"><%= a.created_at %></td>
+        <td style="text-align:right;"><%= a.created_at.to_time.ago_in_words %></td>
       </tr>
       <% end %>
     </table>
