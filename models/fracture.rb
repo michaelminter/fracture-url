@@ -23,6 +23,6 @@ class Fracture
   # end
   
   def pusher_app
-    Pusher['test_channel'].trigger('my_event', { :id => self.id, :url => self.url, :encoded_uri => self.encoded_uri, :created_at => self.created_at.to_time.ago_in_words })
+    Pusher['test_channel'].trigger('my_event', { :id => self.id, :url => self.url.length > 40 ? "#{self.url[0..40]}..." : self.url, :encoded_uri => self.encoded_uri, :created_at => self.created_at.to_time.ago_in_words })
   end
 end

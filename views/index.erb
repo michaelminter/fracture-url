@@ -22,7 +22,7 @@
     
       <div id="second" class="seven columns offset-by-two omega">
         
-        <p>Our <strong>brand new</strong> site is on it's way, not long to go now. <a href="/">Keep checking</a> with us for updates, we'll be offering <strong>news, advice & freebies</strong> for everyone that helps <a href="http://twitter.com/mothore" target="_blank"> get the word out</a>.</p><!--MAIN COPY, ADD IN WHAT YOU WISH-->
+        <p>Our <strong>brand new</strong> site is on it's way, not long to go now. <a href="http://twitter.com/mothore" target="_blank">Keep checking</a> with us for updates, we'll be offering <strong>news, advice & freebies</strong> for everyone that helps <a href="http://twitter.com/mothore" target="_blank"> get the word out</a>.</p><!--MAIN COPY, ADD IN WHAT YOU WISH-->
         
         <p class="half-bottom">Key benefits of use:</p><!--MAIN LIST, ADD IN YOUR FEATURES AND BENEFITS-->
         <ul>
@@ -41,14 +41,14 @@
   <div id="status"></div>
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <th>Original URL</th>
-      <th>Fractured URL</th>
-      <th>Creation</th>
+      <th width="500">Original URL</th>
+      <th width="230">Fractured URL</th>
+      <th width="230">Creation</th>
     </tr>
     <tbody id="pusher_container">
       <% @fractures.each do |f| %>
       <tr class="<%= cycle %>">
-        <td><a href="<%= f.url %>" target="_blank"><%= f.url %></a></td>
+        <td><a href="<%= f.url %>" target="_blank"><%= f.url.length > 40 ? "#{f.url[0..40]}..." : f.url %></a></td>
         <td><a href="http://fracture.it/<%= f.encoded_uri %>" target="_blank">http://fracture.it/<%= f.encoded_uri %></a></td>
         <td style="text-align:right;"><%= f.created_at.to_time.ago_in_words %></td>
       </tr>
