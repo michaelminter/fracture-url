@@ -10,6 +10,7 @@ gem 'ps'
 gem 'newrelic_rpm'
 gem 'useragent'
 gem 'rdiscount'
+gem 'chronic'
 
 group :development do
   gem 'sqlite3-ruby'

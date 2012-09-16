@@ -8,6 +8,7 @@ require 'time-ago-in-words'
 require 'json'
 require './config/database'
 require 'useragent'
+require 'chronic'
 
 configure :production do
   require 'newrelic_rpm'
@@ -81,6 +82,9 @@ post '/' do
 end
 
 get '/documentation/analysis' do
+  @today = Date.today
+  @reach = DateTime.parse(Chronic.parse('7 days ago').to_s).to_date
+  @main = DataMapper.repository(:default).adapter.select("select to_char(created_at, 'DDD') as dayofyear, count(1) from activities where to_char(created_at, 'YYYY-MM-DD') between '#{@reach}' and '#{@today}' group by to_char(created_at, 'DDD');")
   @activities = Activity.all
   erb :analysis, :layout => false
 end

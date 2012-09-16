@@ -1,26 +1,3 @@
-<%
-todayyear  = @today.strftime('%j').to_i
-reachyear  = @reach.strftime('%j').to_i > todayyear ? @reach.strftime('%j').to_i + todayyear : @reach.strftime('%j').to_i
-dailycount = []
-
-(reachyear..todayyear).each do |i|
-  esc = 0
-  @main.each do |d|
-    if i == d.dayofyear.to_i
-      dailycount << [d.count, i]
-      esc = 1
-    end
-  end
-  if esc == 0
-    dailycount << [0, i]
-  end
-end
-%>
-<div id="tabs-1">
-  <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
-</div>
-
-<script type="text/javascript">
 $(function () {
     var chart;
     $(document).ready(function() {
@@ -39,7 +16,7 @@ $(function () {
                 x: -20
             },
             xAxis: {
-                categories: [<% (0..7).reverse_each do |i| %>'<%= DateTime.parse(Chronic.parse("#{i} days ago").to_s).strftime('%_m/%-d') %>',<% end %>],
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 labels: {
                     align: 'left',
                     x: 3,
@@ -63,7 +40,8 @@ $(function () {
             },
             tooltip: {
                 formatter: function() {
-                        return '<strong>'+this.y+' '+this.series.name+'</strong>';
+                        return '<b>'+ this.series.name +'</b><br/>'+
+                        this.x +': '+ this.y +'°C';
                 },
                 crosshairs: true
             },
@@ -77,9 +55,8 @@ $(function () {
             },
             series: [{
                 name: 'Requests',
-                data: [<%= dailycount.map {|d| d[0] }.join(',') %>]
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
             }]
         });
     });
 });
-</script>
