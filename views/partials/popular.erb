@@ -10,8 +10,8 @@
       </tr>
       <% @activities.each do |a| %>
       <tr class="<%= cycle %>">
-        <td><a href="<%= a.fracture.url %>" target="_blank"><%= a.fracture.url %></a></td>
-        <td><a href="http://fracture.it/<%= a.fracture.encoded_uri %>">http://fracture.it/<%= a.fracture.encoded_uri %></a></td>
+        <td><a href="<%= a.fracture.url %>" target="_blank" rel="nofollow"><%= a.fracture.url %></a></td>
+        <td><a href="http://fracture.it/<%= a.fracture.encoded_uri %>" target="_blank" rel="nofollow">http://fracture.it/<%= a.fracture.encoded_uri %></a></td>
         <td><%= a.browser %> <%= 'v.' unless a.version.nil? %><%= a.version %></td>
         <td><%= a.platform %></td>
         <td style="text-align:right;"><%= a.created_at.to_time.ago_in_words %></td>
