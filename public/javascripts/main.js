@@ -6,14 +6,13 @@ $(document).ready(function() {
       var form      = $(this);
       var post_url  = form.attr('action');
       var post_data = form.serialize();
-      $('#loader', form).html('<img src="/images/loader.gif" /> Please Wait...');
+      $('#messages small').html('<img src="/images/loading.gif" /> Please Wait...');
       $.ajax({
         type: 'POST',
         url: post_url,
         data: post_data,
         dataType: 'json',
         success: function(msg) {
-          console.log(msg.errors.length);
           $('#messages small').fadeOut(500);
           setTimeout(function() {
             $('#messages small').html(msg.fractured_url).fadeIn(500);
