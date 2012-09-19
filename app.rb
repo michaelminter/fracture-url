@@ -85,7 +85,7 @@ get '/documentation/analysis' do
   @today = Date.today
   @reach = DateTime.parse(Chronic.parse('7 days ago').to_s).to_date
   @main = DataMapper.repository(:default).adapter.select("select to_char(created_at, 'DDD') as dayofyear, count(1) from activities where to_char(created_at, 'YYYY-MM-DD') between '#{@reach}' and '#{@today}' group by to_char(created_at, 'DDD');")
-  @activities = Activity.all
+  @activities = DataMapper.repository(:default).adapter.select("SELECT COUNT(activities.fracture_id) AS count, fractures.url,fractures.encoded_uri FROM activities INNER JOIN fractures ON activities.fracture_id=fractures.id GROUP BY activities.fracture_id,fractures.url,fractures.encoded_uri ORDER BY count DESC;")
   erb :analysis, :layout => false
 end
 
