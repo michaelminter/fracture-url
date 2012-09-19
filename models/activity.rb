@@ -13,4 +13,5 @@ class Activity
   belongs_to :fracture
   
   validates_length_of :platform, :min => 1
+  validates_uniqueness_of :host_ip, :scope => :fracture_id
 end

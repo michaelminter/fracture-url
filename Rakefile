@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'datamapper'
+require './config/database'
 
 namespace :db do
   require './config/database'
