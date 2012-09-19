@@ -8,6 +8,7 @@ class Fracture
   
   has n, :activities
   
+  validates_length_of :url, :min => 6
   validates_format_of :url, :with => /\./, :message => 'Not a valid URL format'
   
   before :save, :check_url

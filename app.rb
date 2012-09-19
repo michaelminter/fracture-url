@@ -71,13 +71,13 @@ post '/' do
     
   if @fracture.save
     if @fracture.update(:encoded_uri => @fracture.id.to_s(36))
-      { :fractured_url => "http://fracture.it/#{@fracture.encoded_uri}" }.to_json
+      { :fractured_url => "http://fracture.it/#{@fracture.encoded_uri}", :errors => '' }.to_json
     end
   else
     @fracture.errors.each do |e|
       Pusher['test_channel'].trigger('errors', { :message => e })
     end
-    { :fractured_url => '', :error => @fracture.errors.full_messages }.to_json
+    { :fractured_url => '', :errors => @fracture.errors.full_messages }.to_json
   end
 end
 
