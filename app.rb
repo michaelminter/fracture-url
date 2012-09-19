@@ -52,7 +52,7 @@ get '/:encoded_uri' do
       :version => user_agent.version.to_s.gsub(/[^0-9|.]/,'').split('.')[0].to_i,
       :platform => user_agent.platform,
       :is_mobile => user_agent.mobile?
-    )
+    ) rescue ''
     
     redirect @fracture.url
   else

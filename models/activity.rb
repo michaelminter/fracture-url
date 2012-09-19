@@ -11,4 +11,6 @@ class Activity
   property :created_at, DateTime
   
   belongs_to :fracture
+  
+  validates_length_of :platform, :min => 1
 end
