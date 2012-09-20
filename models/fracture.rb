@@ -2,15 +2,13 @@ class Fracture
   include DataMapper::Resource
   
   property :id, Serial
-  property :url, String, :length => 200, :required => true, :format => /\./
+  property :url, String, :length => 200, :required => true, :format => :url
   property :encoded_uri, String
   property :created_at, DateTime
   
   has n, :activities
-  
-  # validates_format_of :url, :with => /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/, :message => 'Not a valid URL format'
-  
-  before :save, :check_url
+    
+  before :valid?, :check_url
   # after  :save, :encode_uri
   after  :update, :pusher_app
   
