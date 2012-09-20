@@ -72,6 +72,8 @@ post '/' do
   if @fracture.save
     if @fracture.update(:encoded_uri => @fracture.id.to_s(36))
       { :fractured_url => "http://fracture.it/#{@fracture.encoded_uri}", :errors => '' }.to_json
+    else
+      { :fractured_url => '', :errors => 'Not a valid URL format' }.to_json
     end
   else
     @fracture.errors.each do |e|

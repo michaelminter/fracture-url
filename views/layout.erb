@@ -49,7 +49,7 @@
       
       channel.bind('my_event', function(data) {
         var url = '<a href="'+data.url+'" target="_blank">'+data.url+'</a>';
-        var uri = '<a href="http://fracture.it/'+data.encoded_uri+'" target="_blank">http://fracture.it/'+data.encoded_uri+'</a>';
+        var uri = '<a href="/'+data.encoded_uri+'" target="_blank">http://fracture.it/'+data.encoded_uri+'</a>';
         
         if ($('#pusher_container tr:first').attr('class') == 'even') {
           $('#pusher_container').prepend($('<tr class="odd"><td>'+url+'</td><td>'+uri+'</td><td style="text-align:right;">'+data.created_at+'</td></tr>').fadeIn('slow'));
@@ -82,13 +82,6 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
-
-<script type="text/javascript" src="http://include.reinvigorate.net/re_.js"></script>
-<script type="text/javascript">
-try {
-reinvigorate.track("kb1b0-2q03y772qs");
-} catch(err) {}
 </script>
 
 <script type="text/javascript">var _tid="5761e977363bd4d3bc25fd3db39e2e08";(function(){var ts=document.createElement("script");ts.type="text/javascript";ts.async=true;ts.src="http://analytics.linkalert.io/la.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ts,s);})(); </script>
