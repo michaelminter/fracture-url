@@ -26,4 +26,12 @@ or, if your URL is more than 200 characters, or simply isn't a URL at all
       $('#message').html("Fractured URL: " + data.fractured_url);
     });
 
+##Sandbox
+
+    curl -d 'url=yourdomain' http://fracture.it/sandbox
+
+**JSON Return**
+
+`{"fractured_url":"http://fracture.it/$url","error":""}`
+
 [Back](/)
