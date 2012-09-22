@@ -9,11 +9,11 @@ This page refers to the Fracture.it API. Below I will describe how to interact w
 
 **JSON Return**
 
-`{"fractured_url":"http://fracture.it/3","error":""}`
+`{"fractured_url":"http://fracture.it/3","errors":""}`
 
 If your URL is more than 200 characters, or is an invalid URL:
 
-`{"fractured_url":"","error":["Not a valid URL format"]}`
+`{"fractured_url":"","errors":["Not a valid URL format"]}`
 
 ##AJAX
 
@@ -32,6 +32,6 @@ If your URL is more than 200 characters, or is an invalid URL:
 
 **JSON Return**
 
-`{"fractured_url":"http://fracture.it/$url","error":""}`
+`{"fractured_url":"http://fracture.it/$url","errors":""}`
 
 [Back](/)
