@@ -83,6 +83,12 @@ post '/' do
   end
 end
 
+post '/sandbox' do
+  content_type :json
+  
+  { :fractured_url => "http://fracture.it/#{params[:url]}", :errors => '' }.to_json
+end
+
 get '/documentation/analysis' do
   @today = Date.today
   @reach = DateTime.parse(Chronic.parse('7 days ago').to_s).to_date
