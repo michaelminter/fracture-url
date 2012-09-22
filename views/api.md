@@ -9,7 +9,7 @@ This page refers to the Fracture.it API. Below I will describe how to interact w
 
 **JSON Return**
 
-`{"fractured_url":"http://fracture.it/3"}`
+`{"fractured_url":"http://fracture.it/3","error":""}`
 
 or, if your URL is more than 200 characters, or simply isn't a URL at all
 
