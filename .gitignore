@@ -3,3 +3,4 @@ my.db
 .bundle
 config/pusher_credentials.rb
 .project
+.idea
