@@ -1,13 +1,12 @@
 ## About
 
-Sinatra-DataMapper-Template is a little template to help you quickly start work
-on your Sinatra/DataMapper projects without worrying about writing too much
-boilerplate code. Here's a list of its features:
+Sinatra application to shorten URLs
 
- - Basic `app.rb` file with DataMapper setup and a couple routes
- - RSpec testing
- - Ready for deploying to Heroku
- - Includes my HTML5 template, which includes jQuery and Eric Meyer's CSS reset
+###Features
+
+* URL shortening, using base36
+* JSON API
+* Analytics via Highcharts.js
 
 ## License
 
