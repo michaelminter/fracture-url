@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="DBNavigator.Module.ConnectionManager">
+    <connections />
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.0.5, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.2.4, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ansi (v1.4.3, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v2.1.4, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.2.1, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="chronic (v0.7.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="configuration (v1.2.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="data_objects (v0.10.3, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="datamapper (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.1.2, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-aggregates (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-constraints (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-core (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-do-adapter (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-migrations (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-postgres-adapter (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-serializer (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-sqlite-adapter (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-timestamps (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-transactions (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-types (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-validations (v1.1.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="do_postgres (v0.10.3, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="do_sqlite3 (v0.10.3, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="fastercsv (v1.5.4, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="heroku (v1.19.1, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v1.4.6, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="launchy (v0.3.7, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.16, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.3.6, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="newrelic_rpm (v3.4.2, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ps (v0.0.8, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pusher (v0.9.4, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v1.2.2, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-flash (v0.1.1, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.5.7, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v0.8.7, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rdiscount (v1.6.8, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rest-client (v1.6.1, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec (v2.5.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v2.5.1, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v2.5.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v2.5.0, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="signature (v0.1.4, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sinatra (v1.2.1, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.3, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sqlite3-ruby (v1.3.3, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="stringex (v1.2.1, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.2.2, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="time-ago-in-words (v0.1.2, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="useragent (v0.4.10, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="uuidtools (v2.1.2, RVM: ruby-1.8.7-p370 [fracture]) [gem]" level="application" />
+  </component>
+</module>
+

@@ -5,7 +5,7 @@ gem 'heroku'
 gem 'datamapper'
 gem 'rack-flash'
 gem 'pusher'
-gem "time-ago-in-words"
+gem "time_ago_in_words"
 gem 'ps'
 gem 'newrelic_rpm'
 gem 'useragent'

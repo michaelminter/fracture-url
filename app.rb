@@ -4,7 +4,7 @@ require 'pusher'
 require 'rdiscount'
 require './config/pusher_credentials' if File.exists?('./config/pusher_credentials.rb')
 require 'active_support'
-require 'time-ago-in-words'
+require 'time_ago_in_words'
 require 'json'
 require './config/database'
 require 'useragent'
@@ -37,6 +37,14 @@ get '/' do
   @pusher_api_key = Pusher.key
   
   erb :index
+end
+
+get '/:encoded_uri/manage' do
+  @fracture = Fracture.first(:encoded_uri => params[:encoded_uri])
+  @requests = @fracture.activities
+  @requests_count = @fracture.activities.count
+
+  erb :manage, :layout => false
 end
 
 get '/:encoded_uri' do

@@ -1,0 +1,11 @@
+<h1>Fractured: <%= @fracture.encoded_uri %></h1>
+
+<p>This fractured URI has received <strong><%= @requests_count %></strong> requests.</p>
+
+<h2>Requests</h2>
+
+<ul>
+  <% @requests.each do |request| %>
+    <li><%= request.browser %> <%= request.version %> (<%= request.platform %>) @ <%= request.created_at %></li>
+  <% end %>
+</ul>
