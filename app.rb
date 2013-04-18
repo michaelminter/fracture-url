@@ -4,7 +4,7 @@ require 'pusher'
 require 'rdiscount'
 require './config/pusher_credentials' if File.exists?('./config/pusher_credentials.rb')
 require 'active_support'
-require 'time_ago_in_words'
+# require 'time_ago_in_words'
 require 'json'
 require './config/database'
 require 'useragent'

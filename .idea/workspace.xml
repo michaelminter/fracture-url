@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a20454ab-b9e8-421a-85bb-7fbf9a7dbac7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/manage.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.rvmrc" afterPath="$PROJECT_DIR$/.rvmrc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.rb" afterPath="$PROJECT_DIR$/app.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/fracture-url.iml" afterPath="$PROJECT_DIR$/.idea/fracture-url.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.erb" afterPath="$PROJECT_DIR$/views/index.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fracture-url.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="a20454ab-b9e8-421a-85bb-7fbf9a7dbac7" time="1366311974078" ignored="false" />
-    <file path="/app.rb" changelist="a20454ab-b9e8-421a-85bb-7fbf9a7dbac7" time="1366313707855" ignored="false" />
-    <file path="/Gemfile" changelist="a20454ab-b9e8-421a-85bb-7fbf9a7dbac7" time="1366312786845" ignored="false" />
+    <file path="/app.rb" changelist="a20454ab-b9e8-421a-85bb-7fbf9a7dbac7" time="1366314134094" ignored="false" />
+    <file path="/Gemfile" changelist="a20454ab-b9e8-421a-85bb-7fbf9a7dbac7" time="1366314142302" ignored="false" />
     <file path="/manage.erb" changelist="a20454ab-b9e8-421a-85bb-7fbf9a7dbac7" time="1366313863259" ignored="false" />
+    <file path="/index.erb" changelist="a20454ab-b9e8-421a-85bb-7fbf9a7dbac7" time="1366314231102" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,16 +38,16 @@
       <file leaf-file-name="app.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="11" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+            <state line="6" column="2" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/manage.erb">
+      <file leaf-file-name="index.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/index.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="11" selection-start="324" selection-end="324" vertical-scroll-proportion="0.17928287">
+            <state line="54" column="81" selection-start="3045" selection-end="3045" vertical-scroll-proportion="0.6081081">
               <folding />
             </state>
           </provider>
@@ -63,7 +65,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="12" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
+            <state line="7" column="2" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,9 +89,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app.rb" />
         <option value="$PROJECT_DIR$/views/manage.erb" />
+        <option value="$PROJECT_DIR$/app.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/views/index.erb" />
       </list>
     </option>
   </component>
@@ -362,13 +365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/fracture.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="7" selection-start="509" selection-end="509" vertical-scroll-proportion="0.33898306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="32" selection-start="330" selection-end="330" vertical-scroll-proportion="0.16">
@@ -386,20 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="12" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="11" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/activity.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -407,9 +389,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/fracture.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="29" selection-start="479" selection-end="479" vertical-scroll-proportion="0.31937173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/manage.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="11" selection-start="324" selection-end="324" vertical-scroll-proportion="0.17928287">
+        <state line="3" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="0.059760958">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="2" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="2" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="81" selection-start="3045" selection-end="3045" vertical-scroll-proportion="0.6081081">
           <folding />
         </state>
       </provider>
