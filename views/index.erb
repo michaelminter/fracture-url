@@ -52,7 +52,7 @@
       <tr class="<%= cycle %>">
         <td><a href="<%= f.url %>" target="_blank" rel="nofollow"><%= f.url.length > 40 ? "#{f.url[0..40]}..." : f.url %></a></td>
         <td><a href="/<%= f.encoded_uri %>" target="_blank" rel="nofollow">http://fracture.it/<%= f.encoded_uri %></a></td>
-        <td style="text-align:right;"><%= f.created_at.to_time.strftime("%Y-%m-%d") %></td>
+        <td style="text-align:right;"><%= f.created_at.to_time.strftime("%Y-%m-%d %H:%M %p") %></td>
       </tr>
       <% end %>
     </tbody>
